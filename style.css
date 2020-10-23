@@ -1,5 +1,6 @@
-body {
-
+body, input{
+    background: rgb(25,213,63);
+    background: linear-gradient(90deg, rgba(25,213,63,1) 0%, rgba(0,212,255,1) 53%, rgba(93,93,255,1) 100%);
     font-family: 'Orbitron', sans-serif;
     text-align: left;
 }
@@ -8,6 +9,7 @@ body {
     background-color: rgb(120, 128, 163);
     border: double 2rem #6a60f7;
     border-radius: 16px;
+    opacity: 85%;
     width: fit-content;
 }
 .grid {    
