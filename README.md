@@ -7,5 +7,3 @@ Technology used:
 - CSS
 - Javascript
 
-# calculator
-# calculator
