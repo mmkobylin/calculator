@@ -5,7 +5,9 @@ body {
 }
 
 .calculator {
-    border: double 2rem #808080;
+    background-color: rgb(120, 128, 163);
+    border: double 2rem #6a60f7;
+    border-radius: 16px;
     width: fit-content;
 }
 .grid {    
@@ -13,13 +15,12 @@ body {
     grid-template-columns: 5rem 5rem 5rem 5rem;
     grid-template-rows: 10rem auto auto auto auto ;
 
-
 }
 
 .grid-item {
     background-color: rgb(158, 253, 253);
     border: 2px solid rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 20px;
     font-size: 30px;
     text-align: center
