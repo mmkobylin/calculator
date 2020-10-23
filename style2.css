@@ -1,3 +1,23 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+
 body {
-    font-family: 'Orbitron', sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+    background: rgb(25,213,63);
+    background: linear-gradient(90deg, rgba(25,213,63,1) 0%, rgba(0,212,255,1) 53%, rgba(93,93,255,1) 100%);
+    padding: 0;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    min-height: max-content;
+    grid-template-columns: repeat(4,6rem);
+    grid-template-rows: repeat(5,6rem);
+
 }
