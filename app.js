@@ -10,14 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //i need total to show when something is clicked;
     //i need the display to show up 
 
-    const display = document.getElementById('total');
-
-    let increment = document.getElementById('1');
-
-    let total = 0; 
-
-    increment.addEventListener('click', () => total +=1);
-
     let three = document.getElementById('3');
     three.addEventListener('click', () => console.log(3));
     let four = document.getElementById('4');
@@ -35,7 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let zero = document.getElementById('0');
     zero.addEventListener('click', () => console.log(0));
 
-    
-    display.innerHTML = total
+    //i need it to rerender it when an event is triggered
+
+   (d => { 
+    let increment = document.getElementById('1');
+
+        let display = document.getElementById('total');
+
+        let total = 0; 
+
+        increment.addEventListener('click', () => { 
+            total +=1 
+        
+        display.textContent = total;
+        
+        });
+    })(document);
 
 });
