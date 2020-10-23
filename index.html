@@ -10,7 +10,6 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
-        <script defer src="app.js" charset="utf-8"></script>
     </head>
     <body>
         <h1>Calculator</h1>
@@ -31,8 +30,9 @@
                     <span class="grid-item" onclick="document.calculator.txt.value +='+'">+</span>
                     <span class="grid-item" onclick="document.calculator.txt.value +='0'">0</span>
                     <span class="grid-item" onclick="document.calculator.txt.value +='.'">.</span>
-                    <span class="grid-item" onclick="document.calculator.txt.value +='='">=</span>
                     <span class="grid-item" onclick="document.calculator.txt.value +='/'">/</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value = eval(document.calculator.txt.value)">=</span>
+
                 </div>
         </form>
     </body>
