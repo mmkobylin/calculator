@@ -27,7 +27,7 @@ body {
 }
 
 .grid-item:active, .grid-item:hover {
-    background-color: aqua;
+    background-color: rgb(85, 243, 125);
     -webkit-box-shadow: inset -2px 4px 42px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: inset -2px 4px 42px 0px rgba(0,0,0,0.75);
     box-shadow: inset -2px 4px 42px 0px rgba(0,0,0,0.75);
