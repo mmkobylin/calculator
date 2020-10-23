@@ -11,19 +11,21 @@ body {
     background: linear-gradient(90deg, rgba(25,213,63,1) 0%, rgba(0,212,255,1) 53%, rgba(93,93,255,1) 100%);
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 .grid {
     display: grid;
     justify-content: center;
     min-height: max-content;
-    grid-template-columns: repeat(4,6rem);
-    grid-template-rows: minmax(6rem, auto) repeat(5,6rem);
+    grid-template-columns: repeat(4,4.75rem);
+    grid-template-rows: minmax(4.75rem, auto) repeat(5,4.75rem);
 }
 
 .grid > button { 
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     border: 3px solid white;
     outline: none;
     background-color: rgb(240, 255, 240, 0.7);
@@ -33,7 +35,10 @@ body {
     background-color: #f0fff0e6;
 
 }
-
+h1 {
+    font-size: 3rem;
+    padding:2rem
+}
 .span-two {
     grid-column: span 2;
 }
@@ -57,7 +62,26 @@ body {
     font-size: 1.5rem;
 }
 
+footer {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    padding-top: 5rem;
 
+}
 
+@media screen and (min-width:700px) {
+    .grid {
+        grid-template-columns: repeat(4,7rem);
+        grid-template-rows: minmax(7rem, auto) repeat(7,5rem);
+    }
+    
+    .grid > button { 
+        
+        font-size: 2.5rem;
+        font-weight: normal;
+        border: 5px solid white;
+
+    }
+}
 
 
