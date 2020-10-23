@@ -39,9 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
         increment.addEventListener('click', () => { 
             total +=1 
         
-        display.textContent = total;
+            //this is where the total is showing:
         
+            display.textContent = total;
+            
         });
-    })(document);
+
+        // let add = document.getElementById('+')
+
+        // add.addEventListener('click', () => { 
+        //     +total +  
+
+    })
+    
+    
+    
+    
+    
+    
+    
+    (document);
 
 });

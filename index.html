@@ -14,24 +14,29 @@
     </head>
     <body>
         <h1>Calculator</h1>
-        <div class="grid">
-            <div class="grid-item display"><span id="total"></span></div>
-            <div id="0" class="grid-item 0">0</div>
-            <div id="1" class="grid-item">1</div>
-            <div id="2" class="grid-item 2">2</div>
-            <div id="3" class="grid-item 3">3</div>
-            <div id="4" class="grid-item 4">4</div>
-            <div id="5" class="grid-item 5">5</div>
-            <div id="6" class="grid-item 6">6</div>
-            <div id="7" class="grid-item 7">7</div>
-            <div id="8" class="grid-item 8">8</div>
-            <div id="9" class="grid-item 9">9</div>
-            <div class="grid-item +">+</div>
-            <div class="grid-item -">-</div>
-            <div class="grid-item *">*</div>
-            <div class="grid-item /">/</div>
-            <div class="grid-item =">=</div>
-        </div>
+            <form class='calculator' name="calculator"> 
+                <input class="value" type="text" name="txt" readonly="">
+                <div class="grid">
+                    <span class="grid-item display"><span id="total"></span></span>
 
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">7</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">8</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">9</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">*</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">4</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">5</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">6</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">-</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">1</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">2</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">3</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">+</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">0</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">.</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">=</span>
+                    <span class="grid-item" onclick="document.calculator.txt.value += ''">/</span>
+
+                </div>
+        </form>
     </body>
 </html>
