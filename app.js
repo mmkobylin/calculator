@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let display = document.getElementById('total');
 
-        let total = 0; 
+        let total = []; 
 
         increment.addEventListener('click', () => { 
             total +=1 
