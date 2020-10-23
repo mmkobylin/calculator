@@ -26,7 +26,12 @@ body {
     font-size: 2rem;
     border: 3px solid white;
     outline: none;
-    background-color: honeydew;
+    background-color: rgb(240, 255, 240, 0.7);
+}
+
+.grid > button:hover{ 
+    background-color: rgb(240, 255, 240, 0.9);
+
 }
 
 
