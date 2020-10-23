@@ -1,3 +1,35 @@
+class Calculator {
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+    this.previousOperandTextElement = previousOperandTextElement;
+    this.currentOperandTextElement = currentOperandTextElement;
+    }
+    //operations performed on calculator
+
+    clear() {
+
+    }
+
+    appendNumber(number){
+
+    }
+
+    chooseOperation(operation) {
+
+    }
+
+    compute() {
+
+    }
+
+    updateDisplay() {
+        
+    }
+
+}
+
+
+
+
 const numberButtons = document.querySelectorAll('[data-number')
 const operationButtons = document.querySelectorAll('[data-operation')
 const deleteButton = document.querySelector('[data-delete')
