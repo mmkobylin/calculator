@@ -13,7 +13,7 @@ class Calculator {
     }
 
     appendNumber(number){
-
+        this.currentOperand = number;
     }
 
     chooseOperation(operation) {
@@ -25,12 +25,10 @@ class Calculator {
     }
 
     updateDisplay() {
-
+        this.currentOperandTextElement.innerText = this.currentOperand;
     }
 
 }
-
-
 
 
 const numberButtons = document.querySelectorAll('[data-number')
