@@ -13,6 +13,10 @@ class Calculator {
         this.operation = undefined
     }
 
+    delete() {
+        this.currentOperand = this.currentOperandTextElement.toString().slice(0, -1)
+    }
+
     appendNumber(number){
         //making sure there is only one dot
         //'return' stops it from adding any more dots! 
@@ -24,6 +28,7 @@ class Calculator {
     chooseOperation(operation) {
         //not appending an empty string
         if (this.currentOperand === '') return
+        //compute the operations on previous value
         if (this.previousOperand !== '' ) {
             this.compute()
         }
@@ -33,6 +38,35 @@ class Calculator {
     }
 
     compute() {
+        let computation 
+        const prev = parseFloat(this.previousOperand)
+        const current = parseFloat(this.currentOperand)
+        if (isNaN(prev) || isNaN(current)) return 
+
+        switch (this.operation) {
+            case '+': 
+            computation = prev + current 
+            break
+
+            case '-': 
+            computation = prev - current 
+            break
+
+            case '*': 
+            computation = prev * current 
+            break
+
+            case '/': 
+            computation = prev / current 
+            break
+            //in case of invalid computation
+            default:
+                return
+        }
+
+        this.currentOperand = computation
+        this.operation = undefined
+        this.previousOperand = ''
 
     }
 
@@ -70,4 +104,20 @@ operationButtons.forEach(button => {
         calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
+})
+
+equalsButton.addEventListener('click', button => {
+    //calling compute function
+    calculator.compute()
+    calculator.updateDisplay()
+})
+
+allClearButton.addEventListener('click', button => {
+    calculator.clear()
+    calculator.updateDisplay()
+})
+
+deleteButton.addEventListener('click', button => {
+    calculator.delete()
+    calculator.updateDisplay()
 })
