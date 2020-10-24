@@ -45,20 +45,20 @@ class Calculator {
 
         switch (this.operation) {
             case '+': 
-            computation = prev + current 
-            break
+                computation = prev + current 
+                break
 
             case '-': 
-            computation = prev - current 
-            break
+                computation = prev - current 
+                break
 
-            case '*': 
-            computation = prev * current 
-            break
-
+            case '*':
+                computation = prev * current
+                break
+                
             case '/': 
-            computation = prev / current 
-            break
+                computation = prev / current 
+                break
             //in case of invalid computation
             default:
                 return
