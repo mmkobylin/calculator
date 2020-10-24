@@ -22,6 +22,11 @@ class Calculator {
     }
 
     chooseOperation(operation) {
+        //not appending an empty string
+        if (this.currentOperand === '') return
+        if (this.previousOperand !== '' ) {
+            this.compute()
+        }
         this.operation = operation
         this.previousOperand = this.currentOperand
         this.currentOperand = ''
@@ -34,6 +39,7 @@ class Calculator {
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand;
         this.previousOperandTextElement.innerText = this.previousOperand;
+
     }
 
 }
@@ -61,7 +67,6 @@ numberButtons.forEach(button => {
 //operations buttons working 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
-        calculator.appendNumber(button.innerText)
         calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
