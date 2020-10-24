@@ -79,13 +79,13 @@ class Calculator {
 }
 
 
-const numberButtons = document.querySelectorAll('[data-number')
-const operationButtons = document.querySelectorAll('[data-operation')
-const deleteButton = document.querySelector('[data-delete')
-const allClearButton = document.querySelector('[data-all-clear')
-const equalsButton = document.querySelector('[data-equal')
-const previousOperandTextElement = document.querySelector('[data-previous-operand')
-const currentOperandTextElement = document.querySelector('[data-current-operand')
+const numberButtons = document.querySelectorAll('[data-number]')
+const operationButtons = document.querySelectorAll('[data-operation]')
+const deleteButton = document.querySelector('[data-delete]')
+const allClearButton = document.querySelector('[data-all-clear]')
+const equalsButton = document.querySelector('[data-equal]')
+const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
 const calculator = new Calculator(previousOperandTextElement, 
     currentOperandTextElement)
@@ -110,14 +110,19 @@ equalsButton.addEventListener('click', button => {
     //calling compute function
     calculator.compute()
     calculator.updateDisplay()
+    console.log('equal')
 })
 
 allClearButton.addEventListener('click', button => {
     calculator.clear()
     calculator.updateDisplay()
+    console.log('clear')
+
 })
 
 deleteButton.addEventListener('click', button => {
     calculator.delete()
     calculator.updateDisplay()
+    console.log('delete')
+
 })
