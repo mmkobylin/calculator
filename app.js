@@ -6,6 +6,7 @@ class Calculator {
 }
     //operations performed on calculator
 
+    
     clear() {
         this.currentOperand = ''
         this.previousOperand = ''
@@ -13,7 +14,11 @@ class Calculator {
     }
 
     appendNumber(number){
-        this.currentOperand = number;
+        //making sure there is only one dot
+        //'return' stops it from adding any more dots! 
+        if (number === '.' && this.currentOperand.includes('.')) return 
+        //adding next number behind the previous one
+        this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
@@ -43,6 +48,13 @@ const calculator = new Calculator(previousOperandTextElement,
     currentOperandTextElement)
 
 numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+
+operationButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
