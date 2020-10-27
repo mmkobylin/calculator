@@ -86,10 +86,32 @@ class Calculator {
     
     //modifying the number
     getDisplayNumber(number) {
-        const floatNumber = parseFloat(number)
-        if (isNaN(floatNumber)) return ''
-        return floatNumber.toLocaleString('en')
-    }
+        //getting number and converting to strings
+        const stringNumber = number.toString()
+        //splitting the number into the array, before and after the decimal point
+        //this takes the first item of the array (integer)
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        //this takes the second item of the array (decimal)
+        const decimalDigits = stringNumber.split('.')[1]
+
+        let integerDisplay
+        //if there are no ingeters, return an empty string
+        if(isNaN(integerDigits)) {
+            integerDisplay = ''
+        } else {
+            //if they are, add commas in correct places
+            integerDisplay = integerDigits.toLocaleString('en', {
+                maximumFractionDigits: 0 })
+            } 
+            //if there are decimals, show the integer-dot-decimal display
+            if (decimalDigits != null) {
+                return `${integerDisplay}.${decimalDigits}`
+            //if there is no decimals, show integers
+            } else {
+                return integerDisplay
+            }
+        }
+  
 
     //updating  Display
     updateDisplay() {
