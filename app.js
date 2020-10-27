@@ -38,42 +38,45 @@ class Calculator {
     }
 
     compute() {
-        let computation 
+        let computation
         const prev = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
-        if (isNaN(prev) || isNaN(current)) return 
-
+        if (isNaN(prev) || isNaN(current)) return
         switch (this.operation) {
-            case '+': 
-                computation = prev + current 
-                break
-
-            case '-': 
-                computation = prev - current 
-                break
-                
-            case '*':
-                computation = prev * current
-                break
-            case '/': 
-                computation = prev / current 
-                break
-            //in case of invalid computation
-            default:
-                return
+          case '+':
+            computation = prev + current
+            break
+          case '-':
+            computation = prev - current
+            break
+          case '*':
+            computation = prev * current
+            break
+          case '÷':
+            computation = prev / current
+            break
+          default:
+            return
         }
-
         this.currentOperand = computation
         this.operation = undefined
         this.previousOperand = ''
+    }
+    
 
+    getDisplayNumber(number) {
+        return number
     }
 
+
     updateDisplay() {
-        this.currentOperandTextElement.innerText = this.currentOperand;
+        this.currentOperandTextElement.innerText = 
+        this.getDisplayNumber(this.currentOperand);
         if (this.operation != null){
             this.previousOperandTextElement.innerText =
-             `${this.previousOperand} ${this.operation}`
+             `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        } else {
+            this.previousOperandTextElement.innerText = ' '
         }
     }
 
@@ -109,7 +112,9 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener('click', button => {
     //calling compute function
+
     calculator.compute()
+
     calculator.updateDisplay()
 })
 
