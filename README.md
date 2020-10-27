@@ -7,3 +7,5 @@ Technology used:
 - CSS
 - Javascript
 
+The style contents are ordered alphabetically.
+
