@@ -97,9 +97,16 @@ h1 {
         font-size: 2.5rem;
         font-weight: normal;
         border: 5px solid white;
-
     }
 
+    .output {
+        font-size: 2rem;
+    }
+
+    .output .previous-operand {
+        font-size: 1.8rem;
+    }
+    
 }
 
 
