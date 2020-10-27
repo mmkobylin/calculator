@@ -109,18 +109,13 @@ equalsButton.addEventListener('click', button => {
     //calling compute function
     calculator.compute()
     calculator.updateDisplay()
-    console.log('equal')
 })
 
 allClearButton.addEventListener('click', button => {
     calculator.clear()
     calculator.updateDisplay()
-    console.log('clear')
-
 })
 
 deleteButton.addEventListener('click', button => {
     calculator.delete()
-    console.log('delete')
-
 })
