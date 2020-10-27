@@ -69,7 +69,7 @@ class Calculator {
             break
 
             //dividing
-          case '÷':
+          case '/':
             computation = prev / current
             break
             //running defaultvif neither selected
@@ -86,7 +86,9 @@ class Calculator {
     
     //modifying the number
     getDisplayNumber(number) {
-        return number
+        const floatNumber = parseFloat(number)
+        if (isNaN(floatNumber)) return ''
+        return floatNumber.toLocaleString('en')
     }
 
     //updating  Display
